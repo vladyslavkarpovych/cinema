@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create news</title>
+</head>
+<body>
+<form action="#" th:action="@{/news-create}" th:object="${news}" method="post">
+    <label for="newsId">News ID</label>
+    <input readonly type="number" th:field="*{newsId}" id="newsId" placeholder="News ID">
+    <br/>
+    <br/>
+    <label for="cinemaId">Cinema ID</label>
+    <input type="text" th:field="*{cinemaId}" id="cinemaId" placeholder="Cinema ID">
+    <br/>
+    <br/>
+    <label for="newsDescription">News description</label>
+    <input type="text" th:field="*{newsDescription}" id="newsDescription" placeholder="News description">
+    <br/>
+    <br/>
+    <label for="newsDate">Cinema news date</label>
+    <input type="text" th:field="*{newsDate}" id="newsDate" placeholder="Cinema news date">
+    <br/>
+    <br/>
+    <input type="submit" value="Update News">
+</form>
+</body>
+</html>

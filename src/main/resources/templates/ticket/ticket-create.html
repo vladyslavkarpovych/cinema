@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create ticket</title>
+</head>
+<body>
+<form action="#" th:action="@{/ticket-create}" th:object="${ticket}" method="post">
+    <label for="ticketId">Ticket ID</label>
+    <input readonly type="number" th:field="*{ticketId}" id="ticketId" placeholder="Ticket ID">
+    <br/>
+    <br/>
+    <label for="userId">User ID</label>
+    <input type="text" th:field="*{userId}" id="userId" placeholder="User ID">
+    <br/>
+    <br/>
+    <label for="ticketSession">Ticket session</label>
+    <input type="text" th:field="*{ticketSession}" id="ticketSession" placeholder="Ticket session">
+    <br/>
+    <br/>
+    <label for="ticketRowNumber">Ticket row number</label>
+    <input type="text" th:field="*{ticketRowNumber}" id="ticketRowNumber" placeholder="Ticket row number">
+    <br/>
+    <br/>
+    <label for="ticketPlaceNumber">Ticket place number</label>
+    <input type="text" th:field="*{ticketPlaceNumber}" id="ticketPlaceNumber" placeholder="Ticket place number">
+    <br/>
+    <br/>
+    <label for="ticketPaymentStatus">Ticket payment status</label>
+    <input type="text" th:field="*{ticketPaymentStatus}" id="ticketPaymentStatus" placeholder="Ticket payment status">
+    <br/>
+    <br/>
+    <label for="ticketPrice">Ticket price</label>
+    <input type="text" th:field="*{ticketPrice}" id="ticketPrice" placeholder="Ticket price">
+    <br/>
+    <br/>
+    <input type="submit" value="Create ticket">
+</form>
+</body>
+</html>

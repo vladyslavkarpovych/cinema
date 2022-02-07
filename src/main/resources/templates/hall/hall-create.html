@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Create hall</title>
+</head>
+<body>
+<form action="#" th:action="@{/hall-create}" th:object="${hall}" method="post">
+  <label for="hallId">ID</label>
+  <input readonly type="number" th:field="*{hallId}" id="hallId" placeholder="ID">
+  <br/>
+  <br/>
+  <label for="hallName">Hall name</label>
+  <input type="text" th:field="*{hallName}" id="hallName" placeholder="Hall Name">
+  <br/>
+  <br/>
+  <label for="hallWorks">Hall works</label>
+  <input type="text" th:field="*{hallWorks}" id="hallWorks" placeholder="Hall works">
+  <br/>
+  <br/>
+  <label for="numberOfPlaces">Hall number of places</label>
+  <input type="text" th:field="*{numberOfPlaces}" id="numberOfPlaces" placeholder="Hall number of places">
+  <br/>
+  <br/>
+  <label for="numberOfRows">Hall number of rows</label>
+  <input type="text" th:field="*{numberOfRows}" id="numberOfRows" placeholder="Hall number of rows">
+  <br/>
+  <br/>
+  <label for="hallCapacity">Hall capacity</label>
+  <input type="text" th:field="*{hallCapacity}" id="hallCapacity" placeholder="Hall capacity">
+  <br/>
+  <br/>
+  <label for="belongingToCinema">Hall belonging to cinema</label>
+  <input type="text" th:field="*{belongingToCinema}" id="belongingToCinema" placeholder="Hall belonging to cinema">
+  <br/>
+  <br/>
+  <input type="submit" value="Create Hall">
+</form>
+</body>
+</html>

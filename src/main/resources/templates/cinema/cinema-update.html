@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create cinema</title>
+</head>
+<body>
+<form action="#" th:action="@{/cinema-update}" th:object="${cinema}" method="post">
+    <label for="cinemaId">ID</label>
+    <input readonly type="number" th:field="*{cinemaId}" id="cinemaId" placeholder="ID">
+    <br/>
+    <br/>
+    <label for="cinemaName">Cinema name</label>
+    <input type="text" th:field="*{cinemaName}" id="cinemaName" placeholder="Cinema Name">
+    <br/>
+    <br/>
+    <label for="cinemaAddress">Cinema address</label>
+    <input type="text" th:field="*{cinemaAddress}" id="cinemaAddress" placeholder="Cinema Address">
+    <br/>
+    <br/>
+    <label for="cinemaPhoneNumber">Cinema phone number</label>
+    <input type="text" th:field="*{cinemaPhoneNumber}" id="cinemaPhoneNumber" placeholder="Cinema phone number">
+    <br/>
+    <br/>
+    <label for="cinemaDescription">Cinema description</label>
+    <input type="text" th:field="*{cinemaDescription}" id="cinemaDescription" placeholder="Cinema Description">
+    <br/>
+    <br/>
+    <input type="submit" value="Update Cinema">
+</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Create film</title>
+</head>
+<body>
+<form action="#" th:action="@{/film-update}" th:object="${film}" method="post">
+    <label for="filmId">ID</label>
+    <input readonly type="number" th:field="*{filmId}" id="filmId" placeholder="ID">
+    <br/>
+    <br/>
+    <label for="filmName">Film name</label>
+    <input type="text" th:field="*{filmName}" id="filmName" placeholder="Film Name">
+    <br/>
+    <br/>
+    <label for="filmGenreId">Film genre id</label>
+    <input type="text" th:field="*{filmGenreId}" id="filmGenreId" placeholder="Film genre id">
+    <br/>
+    <br/>
+    <label for="filmDuration">Film duration</label>
+    <input type="text" th:field="*{filmDuration}" id="filmDuration" placeholder="Film duration">
+    <br/>
+    <br/>
+    <label for="filmProduction">Film production by</label>
+    <input type="text" th:field="*{filmProductionBy}" id="filmProduction" placeholder="Film production by">
+    <br/>
+    <br/>
+    <label for="filmProductionCountry">Film production country by</label>
+    <input type="text" th:field="*{filmProductionCountryBy}" id="filmProductionCountry"
+           placeholder="Film production country by">
+    <br/>
+    <br/>
+    <label for="filmRentalBegins">Film rental begins</label>
+    <input type="text" th:field="*{filmRentalBegins}" id="filmRentalBegins" placeholder="Film rental begins">
+    <br/>
+    <br/>
+    <label for="filmAgeRestrictions">Film age restrictions</label>
+    <input type="text" th:field="*{filmAgeRestrictions}" id="filmAgeRestrictions" placeholder="Film age restrictions">
+    <br/>
+    <br/>
+    <input type="submit" value="Update Film">
+</form>
+</body>
+</html>

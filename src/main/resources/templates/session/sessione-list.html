@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Sessions</title>
+</head>
+<body>
+<div th:switch="${sessions}">
+    <h2 th:case="null">No sessions found!</h2>
+    <div th:case="*">
+        <h2>Sessions</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Session ID</th>
+                <th>Film ID</th>
+                <th>Cinema ID</th>
+                <th>Hall ID</th>
+                <th>Hall free places</th>
+                <th>Session begins time</th>
+                <th>Session ends time</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="sessio : ${sessions}">
+                <td th:text="${sessio.sessionId}"></td>
+                <td th:text="${sessio.filmId}"></td>
+                <td th:text="${sessio.cinemaId}"></td>
+                <td th:text="${sessio.hallId}"></td>
+                <td th:text="${sessio.hallFreePlaces}"></td>
+                <td th:text="${sessio.sessionBegins}"></td>
+                <td th:text="${sessio.sessionEnds}"></td>
+                <td><a th:href="@{session/sessione-update/{id}(id=${sessio.sessionId})}">Edit</a></td>
+                <td><a th:href="@{sessione-delete/{id}(id=${sessio.sessionId})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/sessione-create">Create session</a></p>
+</div>
+</body>
+</html>

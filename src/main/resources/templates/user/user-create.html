@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create user</title>
+</head>
+<body>
+<form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+    <label for="firstName">First name</label>
+    <input type="text" th:field="*{firstName}" id="firstName" placeholder="First Name">
+
+    <label for="lastName">Last name</label>
+    <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">
+
+    <label for="userAlias">Alias</label>
+    <input type="text" th:field="*{userAlias}" id="userAlias" placeholder="Alias">
+    <br/>
+    <br/>
+    <label for="userEmail">Email</label>
+    <input type="text" th:field="*{userEmail}" id="userEmail" placeholder="Email">
+
+    <label for="userPassword">Password</label>
+    <input type="text" th:field="*{userPassword}" id="userPassword" placeholder="Password">
+    <br/>
+    <br/>
+    <label for="userCardNumber">Card number</label>
+    <input type="number" th:field="*{userCardNumber}" id="userCardNumber" placeholder="Card number">
+
+    <label for="userLanguage">Language</label>
+    <input type="text" th:field="*{userLanguage}" id="userLanguage" placeholder="Language">
+
+    <label for="userSex">Sex</label>
+    <input type="text" th:field="*{userSex}" id="userSex" placeholder="Sex">
+    <br/>
+    <br/>
+
+    <label for="userPhoneNumber">Phone number</label>
+    <input type="text" th:field="*{userPhoneNumber}" id="userPhoneNumber" placeholder="Phone number">
+
+    <label for="userCity">City</label>
+    <input type="text" th:field="*{userCity}" id="userCity" placeholder="City">
+
+    <label for="userBirthday">Birthday date</label>
+    <input type="text" th:field="*{userBirthday}" id="userBirthday" placeholder="Birthday date">
+    <br/>
+    <br/>
+    <input type="submit" value="Create User">
+</form>
+</body>
+</html>

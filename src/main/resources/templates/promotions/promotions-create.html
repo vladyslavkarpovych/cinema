@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create promotions</title>
+</head>
+<body>
+<form action="#" th:action="@{/promotions-create}" th:object="${promotions}" method="post">
+    <label for="promotionsId">Promotions ID</label>
+    <input readonly type="number" th:field="*{promotionsId}" id="promotionsId" placeholder="Promotions ID">
+    <br/>
+    <br/>
+    <label for="cinemaId">Cinema ID</label>
+    <input type="text" th:field="*{cinemaId}" id="cinemaId" placeholder="Cinema ID">
+    <br/>
+    <br/>
+    <label for="promotionsName">Promotions name</label>
+    <input type="text" th:field="*{promotionsName}" id="promotionsName" placeholder="Promotions name">
+    <br/>
+    <br/>
+    <label for="promotionsDescription">Promotions description</label>
+    <input type="text" th:field="*{promotionsDescription}" id="promotionsDescription"
+           placeholder="Promotions description">
+    <br/>
+    <br/>
+    <label for="promotionsDate">Promotions till</label>
+    <input type="text" th:field="*{promotionsDate}" id="promotionsDate" placeholder="Promotions till">
+    <br/>
+    <br/>
+    <input type="submit" value="Create promotions">
+</form>
+</body>
+</html>

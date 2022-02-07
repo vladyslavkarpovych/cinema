@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tickets</title>
+</head>
+<body>
+<div th:switch="${tickets}">
+    <h2 th:case="null">No tickets found!</h2>
+    <div th:case="*">
+        <h2>Tickets</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Ticket ID</th>
+                <th>User ID</th>
+                <th>Session ID</th>
+                <th>Ticket row number</th>
+                <th>Ticket place number</th>
+                <th>Ticket payment status</th>
+                <th>Ticket price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="ticket : ${tickets}">
+                <td th:text="${ticket.ticketId}"></td>
+                <td th:text="${ticket.userId}"></td>
+                <td th:text="${ticket.ticketSession}"></td>
+                <td th:text="${ticket.ticketRowNumber}"></td>
+                <td th:text="${ticket.ticketPlaceNumber}"></td>
+                <td th:text="${ticket.ticketPaymentStatus}"></td>
+                <td th:text="${ticket.ticketPrice}"></td>
+                <td><a th:href="@{ticket/ticket-update/{id}(id=${ticket.ticketId})}">Edit</a></td>
+                <td><a th:href="@{ticket-delete/{id}(id=${ticket.ticketId})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/ticket-create">Create ticket</a></p>
+</div>
+</body>
+</html>

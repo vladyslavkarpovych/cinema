@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create employee</title>
+</head>
+<body>
+<form action="#" th:action="@{/employee-create}" th:object="${employee}" method="post">
+    <label for="employeeId">ID</label>
+    <input readonly type="number" th:field="*{employeeId}" id="employeeId" placeholder="ID">
+    <br/>
+    <br/>
+    <label for="employeePositionId">Employee Position Id</label>
+    <input type="text" th:field="*{employeePositionId}" id="employeePositionId" placeholder="Employee Position Id">
+    <br/>
+    <br/>
+    <label for="employeeCinemaId">Employee cinema Id</label>
+    <input type="text" th:field="*{employeeCinemaId}" id="employeeCinemaId" placeholder="Employee Cinema Id">
+    <br/>
+    <br/>
+    <label for="employeeName">Employee Name</label>
+    <input type="text" th:field="*{employeeName}" id="employeeName" placeholder="Employee Name">
+    <br/>
+    <br/>
+    <label for="employeeSurname">Employee Surname</label>
+    <input type="text" th:field="*{employeeSurname}" id="employeeSurname" placeholder="Employee Surname">
+    <br/>
+    <br/>
+    <label for="employeeAge">Employee Age</label>
+    <input type="text" th:field="*{employeeAge}" id="employeeAge" placeholder="Employee Age">
+    <br/>
+    <br/>
+    <label for="employeeSex">Employee Sex</label>
+    <input type="text" th:field="*{employeeSex}" id="employeeSex" placeholder="Employee Sex">
+    <br/>
+    <br/>
+    <label for="employeeAddress">Employee Address</label>
+    <input type="text" th:field="*{employeeAddress}" id="employeeAddress" placeholder="Employee Address">
+
+    <label for="employeePhoneNumber">Employee Phone Number</label>
+    <input type="text" th:field="*{employeePhoneNumber}" id="employeePhoneNumber" placeholder="Employee Phone Number">
+    <br/>
+    <br/>
+    <input type="submit" value="Create Employee">
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create review</title>
+</head>
+<body>
+<form action="#" th:action="@{/review-update}" th:object="${review}" method="post">
+    <label for="reviewId">Review ID</label>
+    <input readonly type="number" th:field="*{reviewId}" id="reviewId" placeholder="Review ID">
+    <br/>
+    <br/>
+    <label for="filmId">Film ID</label>
+    <input type="text" th:field="*{filmId}" id="filmId" placeholder="Film ID">
+    <br/>
+    <br/>
+    <label for="reviewRate">Review rate</label>
+    <input type="text" th:field="*{reviewRate}" id="reviewRate" placeholder="Review rate">
+    <br/>
+    <br/>
+    <input type="submit" value="Update review">
+</form>
+</body>
+</html>

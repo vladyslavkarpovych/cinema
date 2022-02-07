@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create session</title>
+</head>
+<body>
+<form action="#" th:action="@{/sessione-create}" th:object="${session}" method="post">
+    <label for="sessionId">Session ID</label>
+    <input readonly type="number" th:field="*{sessionId}" id="sessionId" placeholder="Session ID">
+    <br/>
+    <br/>
+    <label for="filmId">Film ID</label>
+    <input type="text" th:field="*{filmId}" id="filmId" placeholder="Film ID">
+    <br/>
+    <br/>
+    <label for="cinemaId">Cinema ID</label>
+    <input type="text" th:field="*{cinemaId}" id="cinemaId" placeholder="Cinema ID">
+    <br/>
+    <br/>
+    <label for="hallId">Hall ID</label>
+    <input type="text" th:field="*{hallId}" id="hallId" placeholder="Hall ID">
+    <br/>
+    <br/>
+    <label for="hallFreePlaces">Hall free places</label>
+    <input type="text" th:field="*{hallFreePlaces}" id="hallFreePlaces" placeholder="Hall free places">
+    <br/>
+    <br/>
+    <label for="sessionBegins">Session begins</label>
+    <input type="text" th:field="*{sessionBegins}" id="sessionBegins" placeholder="Session begins">
+    <br/>
+    <br/>
+    <label for="sessionEnds">Session end</label>
+    <input type="text" th:field="*{sessionEnds}" id="sessionEnds" placeholder="Session end">
+    <br/>
+    <br/>
+    <input type="submit" value="Create session">
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Halls</title>
+</head>
+<body>
+<div th:switch="${halls}">
+    <h2 th:case="null">No halls found!</h2>
+    <div th:case="*">
+        <h2>Halls</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Hall id</th>
+                <th>Hall name</th>
+                <th>Hall works</th>
+                <th>Hall number of places</th>
+                <th>Hall number of rows</th>
+                <th>Hall capacity</th>
+                <th>Hall belonging to cinema</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="hall : ${halls}">
+                <td th:text="${hall.hallId}"></td>
+                <td th:text="${hall.hallName}"></td>
+                <td th:text="${hall.hallWorks}"></td>
+                <td th:text="${hall.numberOfPlaces}"></td>
+                <td th:text="${hall.numberOfRows}"></td>
+                <td th:text="${hall.hallCapacity}"></td>
+                <td th:text="${hall.belongingToCinema}"></td>
+                <td><a th:href="@{hall/hall-update/{id}(id=${hall.hallId})}">Edit</a></td>
+                <td><a th:href="@{hall-delete/{id}(id=${hall.hallId})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/hall-create">Create hall</a></p>
+</div>
+</body>
+</html>
